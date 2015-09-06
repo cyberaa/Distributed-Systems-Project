@@ -2,7 +2,7 @@
 
 # Summary
 
-- This is my Distributed Systems Project from DS and DB Subjects at University of Coimbra, where we have created a Tier 3 concurrent Application with Multi-Threaded Back-End servers, all written in Java, along with an MVC APP(Struts2) and a non-GUI Java Client where we have used a DBMS(PostgreSQL) to save our data. We also used SOAP(XML Configs) and REST Web Services(Facebook Login).
+- This is my Distributed Systems Project from DS and DB Subjects at University of Coimbra, where we have created a Tier 3 concurrent Application with Multi-Threaded Back-End servers, all written in Java, along with an MVC APP(Struts2) and a non-GUI Java Client. To save the data and keep it coherent we have used a Relational DBMS(PostgreSQL). We also used SOAP(XML Configs) and REST Web Services(Facebook Login).
 
 
 <h1> Project Description </h1>
