@@ -1,0 +1,83 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <!-- devMode equals mode debug information and reload everything for every request -->
+    <constant name="struts.devMode" value="true" />
+      
+    <package name="topico" extends="struts-default" namespace="/topico">
+        <action name="criartopico" class="action.topico.CriarTopicoAction" >
+            <result name="success">/topico/criartopico.jsp</result>
+        </action>
+        <action name="apagartopico" class="action.topico.ApagarTopicoAction" >
+            <result name="success">/topico/apagartopico.jsp</result>
+        </action>
+        <action name="listartopicos" class="action.topico.ListarTopicosAction" >
+            <result name="success">/topico/listartopicos.jsp</result>
+        </action>  
+        <action name="listarmeustopicos" class="action.topico.ListarMeusTopicosAction" >
+            <result name="success">/topico/listarmeustopicos.jsp</result>
+        </action>
+    </package>
+    
+    <package name="ideia" extends="struts-default" namespace="/ideia">
+        <action name="criarideia" class="action.ideia.CriarIdeiaAction" >
+            <result name="success">/ideia/criarideia.jsp</result>
+        </action>
+        <action name="apagarideia" class="action.ideia.ApagarIdeiaAction" >
+            <result name="success">/ideia/apagarideia.jsp</result>
+        </action>
+        <action name="listarideiastopicos" class="action.ideia.ListarIdeiasTopicosAction" >
+            <result name="success">/ideia/listarideiastopicos.jsp</result>
+        </action>  
+    </package>
+     <package name="transaccao" extends="struts-default" namespace="/transaccao">
+        <action name="compraraccoesautomatico" class="action.transaccao.ComprarAccoesAutomaticoAction">
+            <result name="success">/transaccao/compraraccoesautomatico.jsp</result>
+        </action>
+        <action name="ordemvenda" class="action.transaccao.OrdemVendaAction" >
+            <result name="success">/transaccao/ordemvenda.jsp</result>
+        </action>
+        <action name="pedidocompra" class="action.transaccao.PedidoCompraAccaoAction">
+            <result name="success">/transaccao/pedidocompra.jsp</result>
+        </action>  
+    </package>
+    
+    <package name="default" extends="struts-default" namespace="/">
+        <!-- 'primes' action calls 'execute' in 'PrimesAction', followed by the view in 'primes.jsp' -->
+        <action name="login" class="action.LoginAction" >
+            <result name="success">/principal.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        <action name="registo" class="action.RegistoAction">
+            <result name="error">/registar.jsp</result>
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="cancelarRegisto" class="action.CancelarRegistoAction">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="principal" class="action.PrincipalAction">
+            <result name="success">/principal.jsp</result>
+        </action>
+        <action name="logout" class="action.LogoutAction">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="meusDados" class="action.MeusDadosAction">
+            <result name="success">/meusDados.jsp</result>
+        </action>
+         <action name="meuHistorico" class="action.MeuHistoricoAction">
+            <result name="success">/meuHistorico.jsp</result>
+        </action>
+        <action name="notificacoes" class="action.NotificacoesAction">
+            <result name="success">/notificacoes.jsp</result>
+        </action>
+        <action name="pedidosCompras" class="action.PedidosComprasAction">
+            <result name="success">/pedidosCompras.jsp</result>
+        </action>
+        <action name="comprarAccao" class="action.ComprarAccaoAction">
+            <result name="success">/comprarAccao.jsp</result>
+        </action>
+    </package>
+</struts>
