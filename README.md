@@ -1,4 +1,5 @@
 # Distributed-Systems-Project
+<a href="http://creativecommons.org/licenses/by-nd/4.0/" target="_blank"><img src="https://img.shields.io/badge/license-CC%20BY--ND-yellow.svg" alt="license.svg"> </a>
 
 # Summary
 
